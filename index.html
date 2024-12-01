@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{escape room.}</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -26,7 +25,6 @@
     <div class="door-container">
       <!-- Dynamically generated doors will be inserted here -->
     </div>
-    <button id="back-button" style="display: none;" onclick="goBack()">Back</button>
   </div>
 
   <!-- Puzzle Screen -->
@@ -38,24 +36,13 @@
     <div id="key" style="display: none;"><img src="key-64.png" alt="key"></div>
   </div>
   
-  <!-- Congratulations Screen -->
-  <div id="congrats-message" style="display: none;">
-    <h1>CONGRATULATIONS YOU WIN</h1>
-    <p>If you are the first, DM an officer with a screenshot to redeem your reward.</p>
+  <!-- Completion Screen -->
+  <div id="completion-screen" style="display: none;">
+    <h2>Congratulations! You've completed the fake escape room.</h2>
+    <button onclick="proceedToActualEscapeRoom()">Proceed to The ACTUAL Escape Room</button>
   </div>
   
+  <!-- Include the script -->
   <script src="script.js"></script>
-  <script>document.addEventListener('keydown', function(event) {
-    // Check if a specific key is pressed (e.g., Enter)
-    if (event.key === '~') {
-      document.getElementById("puzzle-container").style.display = "none";
-    document.getElementById("door-screen").style.display = "none";
-    document.getElementById("title-screen").style.display = "none";
-    console.log("CONGRATS");
-    const congratsMessage = document.getElementById("congrats-message");
-    congratsMessage.style.display = "block";
-    congratsMessage.style.animation = "fadeInEnlarge 0.2s ease forwards";
-    }
-  });</script>
 </body>
 </html>

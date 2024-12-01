@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The ACTUAL Escape Room</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>The ACTUAL Escape Room</h1>
+  <div class="hallway-container">
+    <div id="hallway1" class="colored-hallway" style="background-color: red;" onclick="openHallway(1)">Hallway 1</div>
+    <div id="hallway2" class="colored-hallway" style="background-color: blue;" onclick="openHallway(2)">Hallway 2</div>
+    <div id="hallway3" class="colored-hallway" style="background-color: green;" onclick="openHallway(3)">Hallway 3</div>
+    <div id="hallway4" class="colored-hallway" style="background-color: yellow;" onclick="openHallway(4)">Hallway 4</div>
+    <div id="hallway5" class="colored-hallway" style="background-color: purple;" onclick="openHallway(5)">Hallway 5</div>
+  </div>
+
+  <!-- Congratulations Screen -->
+  <div id="congrats-message" style="display: none;">
+    <h1>CONGRATULATIONS YOU WIN</h1>
+    <p>If you are the first, DM an officer with a screenshot to redeem your reward.</p>
+  </div>
+
+  <!-- Include the script -->
+  <script>
+    function openHallway(hallwayNumber) {
+      window.location.href = `hallway${hallwayNumber}.html`;
+    }
+
+    // Check Hallway Completion
+    function checkCompletion() {
+      let completedHallways = 0;
+      for (let i = 1; i <= 5; i++) {
+        const progress = localStorage.getItem(`hallway${i}Progress`);
+        const hallwayElement = document.getElementById(`hallway${i}`);
+        if (progress !== null && parseInt(progress) >= 5) {
+          hallwayElement.classList.add('completed');
+          hallwayElement.innerHTML = `Hallway ${i} ✔️`;
+          completedHallways++;
+        }
+      }
+      // If all hallways are completed, show the "You win" message
+      if (completedHallways === 5) {
+        document.querySelector('.hallway-container').style.display = 'none';
+        document.getElementById('congrats-message').style.display = 'block';
+      }
+    }
+
+    window.onload = checkCompletion;
+  </script>
+</body>
+</html>
