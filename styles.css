@@ -179,8 +179,3 @@ body {
 #congrats-message p {
   font-size: 24px;
 }
-
-/* Hide the default cursor */
-body {
-  cursor: none;
-}
