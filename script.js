@@ -118,7 +118,7 @@ function checkAnswer() {
   if (answer === questions[currentQuestionIndex].answer) {
     result.textContent = "CORRECT";
     result.style.color = "rgb(87, 214, 87)";
-    showKey();
+    showKey(true); // Pass true to auto-press the key
   } else {
     result.textContent = "INCORRECT";
     result.style.color = "red";
@@ -129,12 +129,29 @@ function checkAnswer() {
 function showKey() {
   const key = document.getElementById("key");
   key.style.display = "block";
+
+  // Add click behavior for the key
   key.onclick = function () {
     keyHeld = true;
     key.style.display = "none";
     goBack();
   };
+
+  // Add an event listener to recognize the Enter key as a click
+  document.addEventListener('keydown', function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      // Trigger the key's onclick logic
+      keyHeld = true;
+      key.style.display = "none";
+      goBack();
+
+      // Remove this event listener after handling the Enter key
+      document.removeEventListener('keydown', handleKeyPress);
+    }
+  });
 }
+
+
 
 // Go Back Function
 function goBack() {
