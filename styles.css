@@ -136,8 +136,57 @@ body {
 }
 
 .colored-hallway.completed {
-  opacity: 0.6;
-  pointer-events: none;
+  background-color: gray;
+  color: white;
+  border: 2px solid gold;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px gold;
+  }
+  to {
+    box-shadow: 0 0 20px gold;
+  }
+}
+
+#congrats-message {
+  text-align: center;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#congrats-message {
+  text-align: center;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: black;
 }
 
 /* Additional Styles */

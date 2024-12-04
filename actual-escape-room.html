@@ -5,15 +5,17 @@
   <title>The ACTUAL Escape Room</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+<canvas id="code-background"></canvas>
+
 <body>
   <!-- Change the hallway names to officer names-->
   <h1>The ACTUAL Escape Room</h1>
   <div class="hallway-container">
-    <div id="hallway1" class="colored-hallway" style="background-color: red;" onclick="openHallway(1)">Hallway 1</div>
-    <div id="hallway2" class="colored-hallway" style="background-color: blue;" onclick="openHallway(2)">Hallway 2</div>
-    <div id="hallway3" class="colored-hallway" style="background-color: green;" onclick="openHallway(3)">Hallway 3</div>
-    <div id="hallway4" class="colored-hallway" style="background-color: yellow;" onclick="openHallway(4)">Hallway 4</div>
-    <div id="hallway5" class="colored-hallway" style="background-color: purple;" onclick="openHallway(5)">Hallway 5</div>
+    <div id="hallway1" class="colored-hallway" style="background-color: red;" onclick="openHallway(1)">Haydn</div>
+    <div id="hallway2" class="colored-hallway" style="background-color: blue;" onclick="openHallway(2)">Geoffrey Liu</div>
+    <div id="hallway3" class="colored-hallway" style="background-color: green;" onclick="openHallway(3)">Nuhan</div>
+    <div id="hallway4" class="colored-hallway" style="background-color: yellow;" onclick="openHallway(4)">Alan</div>
+    <div id="hallway5" class="colored-hallway" style="background-color: purple;" onclick="openHallway(5)">John</div>
   </div>
 
   <!-- Congratulations Screen -->
@@ -24,30 +26,81 @@
 
   <!-- Include the script -->
   <script>
+    // Function to open hallways with smooth transition
     function openHallway(hallwayNumber) {
-      window.location.href = `hallway${hallwayNumber}.html`;
+      const hallway = document.getElementById(`hallway${hallwayNumber}`);
+      hallway.style.transition = 'opacity 0.5s ease';
+      hallway.style.opacity = 0;
+  
+      setTimeout(() => {
+        window.location.href = `hallway${hallwayNumber}.html`;
+      }, 500); // Match the transition duration
     }
-
+  
     // Check Hallway Completion
     function checkCompletion() {
       let completedHallways = 0;
+  
+      // Get progress from localStorage
+      const progress = JSON.parse(localStorage.getItem('escapeRoomProgress')) || {};
+  
       for (let i = 1; i <= 5; i++) {
-        const progress = localStorage.getItem(`hallway${i}Progress`);
+        const hallwayProgress = progress[`hallway${i}`] || 0;
         const hallwayElement = document.getElementById(`hallway${i}`);
-        if (progress !== null && parseInt(progress) >= 5) {
+  
+        if (hallwayProgress >= 5) {
           hallwayElement.classList.add('completed');
           hallwayElement.innerHTML = `Hallway ${i} ✔️`;
           completedHallways++;
         }
       }
+  
       // If all hallways are completed, show the "You win" message
       if (completedHallways === 5) {
         document.querySelector('.hallway-container').style.display = 'none';
         document.getElementById('congrats-message').style.display = 'block';
       }
     }
-
-    window.onload = checkCompletion;
-  </script>
+  
+    // Code Rain Initialization
+    function initCodeRain() {
+      const canvas = document.getElementById('code-background');
+      const ctx = canvas.getContext('2d');
+  
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+  
+      const columns = Math.floor(canvas.width / 20);
+      const drops = Array(columns).fill(1);
+  
+      const draw = () => {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+  
+        ctx.fillStyle = '#0F0';
+        ctx.font = '20px monospace';
+  
+        drops.forEach((y, index) => {
+          const text = String.fromCharCode(33 + Math.random() * 94);
+          const x = index * 20;
+  
+          ctx.fillText(text, x, y * 20);
+  
+          if (y * 20 > canvas.height && Math.random() > 0.975) {
+            drops[index] = 0;
+          }
+          drops[index]++;
+        });
+      };
+  
+      setInterval(draw, 50);
+    }
+  
+    // Run functions on page load
+    window.onload = () => {
+      initCodeRain();
+      checkCompletion();
+    };
+  </script>  
 </body>
 </html>
