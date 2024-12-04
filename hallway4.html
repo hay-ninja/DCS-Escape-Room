@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hallway 4 - Escape Room</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Hallway 4</h2>
+  <button onclick="goBackToHallways()">Back to Hallways</button>
+  <!-- Door Screen -->
+  <div id="door-screen">
+    <div class="door-container">
+      <!-- Doors will be generated here -->
+    </div>
+  </div>
+
+  <!-- Puzzle Screen -->
+  <div id="puzzle-container" style="display: none;">
+    <p id="puzzle-question"></p>
+    <input type="text" id="answer" placeholder="Your Answer">
+    <button onclick="checkAnswer()">SUBMIT</button>
+    <p id="result"></p>
+    <div id="key" style="display: none;"><img src="key-64.png" alt="key"></div>
+  </div>
+  
+  <!-- Completion Screen -->
+  <div id="completion-screen" style="display: none;">
+    <h2>Congratulations! You've completed Hallway 4.</h2>
+    <button onclick="goBackToHallways()">Back to Hallways</button>
+  </div>
+
+  <!-- Include the script -->
+  <script src="hallway4.js"></script>
+</body>
+</html>

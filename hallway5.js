@@ -2,43 +2,33 @@
 let currentQuestionIndex = 0;
 let keyHeld = false;
 
-// Questions Array for Hallway 2
-
-
-
-//IF YOU'RE LOOKING FOR THE ANSWERS THEN
-// YOU'RE A VERY BAD PERSON. >:(
-// DONT DO IT AND DO THE QUESTIONS PROPERLY!!!
-
-
-
-
+// Questions Array for Hallway 5
 const questions = [
   {
-    question: '<pre>In order to make a\nstandard prefix sum of the array "[1,2,3,4]",\nwhat would the size of the\nresultant prefix sum array be?</pre>',
-    answer: 'NQ=='
+    question: '<pre>Mr. Bailey has been gaining fans every year. Here’s how his fanbase grew:\n\n- 2020: 40 fans- 2021: 107 fans\n- 2022: 404 fans\n- 2023: 709 fans\n- 2024: 1039 fans\n\nWhat is the **average number of fans** Mr. Bailey has had per year from 2020 to 2024?</pre>',
+    answer: '459.8'
   },
   {
-    question: '<pre>The resultant prefix sum array\n of "[1,2,3,4]" is stored in array "P".\nWhat would the value of P[3] equal?</pre>',
-    answer: 'Ng=='
+    question: '<pre>Find the palindrome for “supercalifragilisticexpialidocious” and concatenate the 11th, 2nd, and 5th letter in that order. \n\nThe secret classroom to Mr. Bailey’s classroom is the answer!</pre>',
+    answer: 'iuc'
   },
   {
-    question: '<pre>Now for a harder problem!\nI recommend coding this one out.\n<a href="data:text/plain;base64,TXIuIEJhaWxleSBoYXMgdGhyZWUgcG9zaXRpdmUgaW50ZWdlcnMgQSxCLCBhbmQgQyAoQSA8PSBCIDw9IEMpLiBUaGVzZSBpbnRlZ2VycyBhcmUgc3VwcG9zZWQgdG8gYmUga2VwdCBzZWNyZXQsIHNvIGhlIG9ubHkgdGVsbHMgdGhlbSB0byBXaWxsaWFtIEJyaXR0b24gYW5kIGRvZXMgbm90IHJldmVhbCB0aGVtIHRvIHRoZSByZXN0IG9mIHRoZSBjbGFzcy4gSW5zdGVhZCwgaGUgZ2l2ZXMgdGhlIGNsYXNzIHNldmVuIChub3QgbmVjZXNzYXJpbHkgZGlzdGluY3QpIGludGVnZXJzIGluIHRoZSByYW5nZSAxLi4uMTBeOSwgc3RhdGluZyB0aGF0IHRoZXkgYXJlIEEsIEIsIEMsIEEgKyBCLCBCICsgQywgQyArIEEsIGFuZCBBICsgQiArIEMgaW4gc29tZSBvcmRlci4gCgpHaXZlbiBhIGxpc3Qgb2YgdGhlc2Ugc2V2ZW4gbnVtYmVycywgcGxlYXNlIGhlbHAgdGhlIGNsYXNzIGRldGVybWluZSBBLCBCLCBhbmQgQy4KCkdpdmVuIHRoaXMgaW5wdXQ6CjE0ODM4NTI0NyA4MTkzNjU4MjAgNzkzMzIwMzcyIDI2MDQ1NDQ4IDEyMjMzOTc5OSA2NzA5ODA1NzMgNjk3MDI2MDIxCgpXaGF0IGFyZSB0aGUgdmFsdWVzIG9mIEEsIEIsIGFuZCBDPwoKV2hlbiB5b3UgaGF2ZSBhbiBhbnN3ZXIsIHBsZWFzZSBzdWJtaXQgaXQgaW50byB0aGUgZG9vciBpbiB0aGUgZm9ybWF0ICJBIEIgQyIuIEV4OiAxIDIgMwo=">Open me in a new tab for the question data!</a></pre>',
-    answer: 'MjYwNDU0NDggMTIyMzM5Nzk5IDY3MDk4MDU3Mw=='
+    question: '<pre>Mr. Bailey has gone missing!\n\nlet Mr. Bailey = l!i!l\n\nTo locate Mr. Bailey, locate the index of him in this crowd of fans..\n\n”li!lii!il!l!!!iil!!!i!ill!!liillili!i!!iil!!liiiilil!i!i!llii!!!lililiiiii!ll!l!lllil!iillillill!!ll!lii!il!ii!lll!!iilll!iilliill!l!!ll!!!!iilll!l!iiilli!li!!llill!lilil!!l!il!llill!!!iiili!lli!i!ii!l!!!li!!lli!i!li!i!!ililliiliil!l!illl!lli!ll!!llili!i!l!l!ii!il!!ll!iliill!!!ill!!!ii!l!i!!i!!i!iiill!!!l!iil!!l!lill!l!i!ii!!l!!i!l!l!iliii!liiliil!iliiiil!!!llliilll!i!!!!!!l!i!l!liillll!l!!!!lll!lii!lii!llii!llliii!l!!!illllill!!!lllll!!lli!i!ii!ili!i!il!iil!lil!il!l!!iliiiil!ili!l!i!ilililiill!i!l!l!l!l!!ilil!!!!!!lili!!i!!iilii!illll!!!il!i!l!il!!!!iiiliiili!!l!!!!lliil!li!llilii!i!!ii!i!iilll!!!il!!i!lli!i!i!l!!i!!llli!i!ll!!lii!l!ll!l!l!iil!!i!ilii!!lliliiii!!!iiiili!lilll!!!l!illllliiliiii!i!il!!!!li!l!!ii!i!!!!li!ll!lii!iil!iiil!!!li!lilliilll!l!illilll!ill!i!!l!il!lll!!lill!!iliil!!iil!i!ilill!!l!!illll!!l!lllllilliilii!l!!illil!l!il!l!!i!il!illiliillllli!!!li!lii!!l!l!!!iliiiiiililllll!i!!!lii!l!!il!!li!ilii!!ll!liilllllil!i!i!li!llii!i!!!!i!i!iliillll!llili!!liiiii!!iii!!ii!lli!!!l"',
+    answer: '376'
   },
   {
-    question: 'Question 4 for Hallway 2',
-    answer: ''
+    question: 'Question 4 for Hallway 5',
+    answer: 'Answer4'
   },
   {
-    question: 'Question 5 for Hallway 2',
+    question: 'Question 5 for Hallway 5',
     answer: 'Answer5'
   }
 ];
 
 // Load Progress
 function loadProgress() {
-  const savedIndex = localStorage.getItem('hallway2Progress');
+  const savedIndex = localStorage.getItem('hallway5Progress');
   if (savedIndex !== null) {
     currentQuestionIndex = parseInt(savedIndex);
   } else {
@@ -48,7 +38,7 @@ function loadProgress() {
 
 // Save Progress
 function saveProgress() {
-  localStorage.setItem('hallway2Progress', currentQuestionIndex);
+  localStorage.setItem('hallway5Progress', currentQuestionIndex);
 }
 
 // Start Game Function
@@ -97,7 +87,7 @@ function displayQuestion() {
 function checkAnswer() {
   const answer = document.getElementById("answer").value.trim();
   const result = document.getElementById("result");
-  if (answer === dc(questions[currentQuestionIndex].answer)) {
+  if (answer === questions[currentQuestionIndex].answer) {
     result.textContent = "CORRECT";
     result.style.color = "rgb(87, 214, 87)";
     showKey();
@@ -137,9 +127,7 @@ function goBack() {
     document.getElementById("completion-screen").style.display = "block";
   }
 }
-function dc(str) {
-   return decodeURIComponent(atob(str).split('').map(function(c) { return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); }).join('')); 
-}
+
 // Go Back to Hallways Function
 function goBackToHallways() {
   window.location.href = "actual-escape-room.html";
