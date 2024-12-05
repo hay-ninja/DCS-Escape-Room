@@ -228,3 +228,16 @@ canvas {
 #congrats-message p {
   font-size: 24px;
 }
+
+#hallway5{
+  perspective: 1000px;
+  transition: transform 1s ease-in-out;
+    transform-origin: right; /* Pivot point for the door swing */
+  color: black;
+}
+
+#hallway5panel{
+  perspective: 1000px;
+  transition: transform 1s ease-in-out;
+    transform-origin: right; /* Pivot point for the door swing */
+}

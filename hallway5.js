@@ -5,23 +5,23 @@ let keyHeld = false;
 // Questions Array for Hallway 5
 const questions = [
   {
-    question: '<pre>Mr. Bailey has been gaining fans every year. Here’s how his fanbase grew:\n\n- 2020: 40 fans- 2021: 107 fans\n- 2022: 404 fans\n- 2023: 709 fans\n- 2024: 1039 fans\n\nWhat is the **average number of fans** Mr. Bailey has had per year from 2020 to 2024?</pre>',
-    answer: '459.8'
+    question: '<pre>/pre>',
+    answer: ''
   },
   {
-    question: '<pre>Find the palindrome for “supercalifragilisticexpialidocious” and concatenate the 11th, 2nd, and 5th letter in that order. \n\nThe secret classroom to Mr. Bailey’s classroom is the answer!</pre>',
+    question: '<pre></pre>',
     answer: 'iuc'
   },
   {
-    question: '<pre>Mr. Bailey has gone missing!\n\nlet Mr. Bailey = l!i!l\n\nTo locate Mr. Bailey, locate the index of him in this crowd of fans..\n\n”li!lii!il!l!!!iil!!!i!ill!!liillili!i!!iil!!liiiilil!i!i!llii!!!lililiiiii!ll!l!lllil!iillillill!!ll!lii!il!ii!lll!!iilll!iilliill!l!!ll!!!!iilll!l!iiilli!li!!llill!lilil!!l!il!llill!!!iiili!lli!i!ii!l!!!li!!lli!i!li!i!!ililliiliil!l!illl!lli!ll!!llili!i!l!l!ii!il!!ll!iliill!!!ill!!!ii!l!i!!i!!i!iiill!!!l!iil!!l!lill!l!i!ii!!l!!i!l!l!iliii!liiliil!iliiiil!!!llliilll!i!!!!!!l!i!l!liillll!l!!!!lll!lii!lii!llii!llliii!l!!!illllill!!!lllll!!lli!i!ii!ili!i!il!iil!lil!il!l!!iliiiil!ili!l!i!ilililiill!i!l!l!l!l!!ilil!!!!!!lili!!i!!iilii!illll!!!il!i!l!il!!!!iiiliiili!!l!!!!lliil!li!llilii!i!!ii!i!iilll!!!il!!i!lli!i!i!l!!i!!llli!i!ll!!lii!l!ll!l!l!iil!!i!ilii!!lliliiii!!!iiiili!lilll!!!l!illllliiliiii!i!il!!!!li!l!!ii!i!!!!li!ll!lii!iil!iiil!!!li!lilliilll!l!illilll!ill!i!!l!il!lll!!lill!!iliil!!iil!i!ilill!!l!!illll!!l!lllllilliilii!l!!illil!l!il!l!!i!il!illiliillllli!!!li!lii!!l!l!!!iliiiiiililllll!i!!!lii!l!!il!!li!ilii!!ll!liilllllil!i!i!li!llii!i!!!!i!i!iliillll!llili!!liiiii!!iii!!ii!lli!!!l"',
+    question: '<pre></pre>',
     answer: '376'
   },
   {
-    question: 'Question 4 for Hallway 5',
+    question: '',
     answer: 'Answer4'
   },
   {
-    question: 'Question 5 for Hallway 5',
+    question: '',
     answer: 'Answer5'
   }
 ];
@@ -40,6 +40,22 @@ function loadProgress() {
 function saveProgress() {
   localStorage.setItem('hallway5Progress', currentQuestionIndex);
 }
+window.addEventListener("load", function () {
+
+  // Mousemove event for cursor radiance
+  document.addEventListener("mousemove", function (event) {
+    const cursorRadiance = document.getElementById("cursor-radiance");
+    cursorRadiance.style.display = "block";
+    // Update the radiance position based on cursor
+    cursorRadiance.style.left = `${event.pageX}px`;
+    cursorRadiance.style.top = `${event.pageY}px`;
+
+    // Optional: Create a subtle growing/shrinking effect based on cursor movement speed
+    cursorRadiance.style.width = "500px";
+    cursorRadiance.style.height = "500px";
+  });
+
+});
 
 // Start Game Function
 function startGame() {
@@ -56,16 +72,24 @@ function setupDoors() {
     const door = document.createElement("div");
     door.classList.add("door");
     if (i <= currentQuestionIndex) door.classList.add("unlocked"); // Unlock doors up to current progress
-    door.textContent = i + 1;
 
-    door.addEventListener("click", function() {
+    const doorPanel = document.createElement("div");
+    doorPanel.classList.add("door-panel");
+    doorPanel.textContent = i + 1;
+
+    door.appendChild(doorPanel);
+
+    door.addEventListener("click", function () {
       if (door.classList.contains("unlocked")) {
-        enterRoom(i);
+        doorPanel.style.transform = "rotateY(-120deg)";
+        setTimeout(() => enterRoom(i), 1000); // Delay entering the room until animation finishes
       }
     });
+
     doorContainer.appendChild(door);
   }
 }
+
 
 // Enter Room Function
 function enterRoom(index) {
