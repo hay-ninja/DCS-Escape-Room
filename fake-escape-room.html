@@ -41,6 +41,18 @@
     <h2>Congratulations! You've completed the fake escape room.</h2>
     <button onclick="proceedToActualEscapeRoom()">Proceed to The ACTUAL Escape Room</button>
   </div>
+
+  <!-- Back Button -->
+  <button id="back-button" onclick="goBackToPreviousQuestion()">Back</button>
+  <div id="puzzle-container" style="display:none;">
+    <p id="puzzle-question"></p>
+    <input type="text" id="answer" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <button id="back-button" onclick="goBackToPreviousQuestion()" style="display:none;">Back</button>
+    <p id="result"></p>
+  </div>
+  
+
   
   <!-- Include the script -->
   <script src="script.js"></script>

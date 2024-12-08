@@ -125,22 +125,26 @@ function checkAnswer() {
   }
 }
 
-// Show Key Function
+let keyCollected = false; // New flag to track key collection
+
 function showKey() {
   const key = document.getElementById("key");
   key.style.display = "block";
 
   // Add click behavior for the key
   key.onclick = function () {
-    keyHeld = true;
-    key.style.display = "none";
-    goBack();
+    if (!keyCollected) {
+      keyCollected = true; // Mark the key as collected
+      keyHeld = true;
+      key.style.display = "none";
+      goBack();
+    }
   };
 
   // Add an event listener to recognize the Enter key as a click
   document.addEventListener('keydown', function handleKeyPress(event) {
-    if (event.key === 'Enter') {
-      // Trigger the key's onclick logic
+    if (event.key === 'Enter' && !keyCollected) {
+      keyCollected = true; // Mark the key as collected
       keyHeld = true;
       key.style.display = "none";
       goBack();
@@ -150,6 +154,7 @@ function showKey() {
     }
   });
 }
+
 
 
 
