@@ -5,24 +5,67 @@ let keyHeld = false;
 // Questions Array for Hallway 3
 const questions = [
   {
-    question: '<pre>Mr. Bailey has been gaining fans every year. Here’s how his fanbase grew:\n\n- 2020: 40 fans- 2021: 107 fans\n- 2022: 404 fans\n- 2023: 709 fans\n- 2024: 1039 fans\n\nWhat is the **average number of fans** Mr. Bailey has had per year from 2020 to 2024?</pre>',
-    answer: '459.8'
+    question: `What is the time complexity of the following code in Big O notation? (don't use spaces) <pre>for(int i=1; i<=n; i*=2) {
+      for(int j=1; j<=n; j++) {
+          for(int k=1; k<=n; j++) {
+              //does some action here
+        }
+    }
+} </pre>
+  `,
+    answer: 'O(n^2logn)'
   },
   {
-    question: '<pre>Find the palindrome for “supercalifragilisticexpialidocious” and concatenate the 11th, 2nd, and 5th letter in that order. \n\nThe secret classroom to Mr. Bailey’s classroom is the answer!</pre>',
-    answer: 'iuc'
+    question: `<pre>Oh no! Bessie the Cow has unfortunately fallen into a hole, but luckily
+there is a ladder of length N that leads to the top. If Bessie can climb only 
+1 or 2 steps at a time, find the number of distinct ways that
+Bessie could reach the top using 1 or 2 steps. (CODE the solution and find the answer)
+
+input: N = 7
+output: </pre>
+  `,
+    answer: '21'
   },
   {
-    question: '<pre>Mr. Bailey has gone missing!\n\nlet Mr. Bailey = l!i!l\n\nTo locate Mr. Bailey, locate the index of him in this crowd of fans..\n\n”li!lii!il!l!!!iil!!!i!ill!!liillili!i!!iil!!liiiilil!i!i!llii!!!lililiiiii!ll!l!lllil!iillillill!!ll!lii!il!ii!lll!!iilll!iilliill!l!!ll!!!!iilll!l!iiilli!li!!llill!lilil!!l!il!llill!!!iiili!lli!i!ii!l!!!li!!lli!i!li!i!!ililliiliil!l!illl!lli!ll!!llili!i!l!l!ii!il!!ll!iliill!!!ill!!!ii!l!i!!i!!i!iiill!!!l!iil!!l!lill!l!i!ii!!l!!i!l!l!iliii!liiliil!iliiiil!!!llliilll!i!!!!!!l!i!l!liillll!l!!!!lll!lii!lii!llii!llliii!l!!!illllill!!!lllll!!lli!i!ii!ili!i!il!iil!lil!il!l!!iliiiil!ili!l!i!ilililiill!i!l!l!l!l!!ilil!!!!!!lili!!i!!iilii!illll!!!il!i!l!il!!!!iiiliiili!!l!!!!lliil!li!llilii!i!!ii!i!iilll!!!il!!i!lli!i!i!l!!i!!llli!i!ll!!lii!l!ll!l!l!iil!!i!ilii!!lliliiii!!!iiiili!lilll!!!l!illllliiliiii!i!il!!!!li!l!!ii!i!!!!li!ll!lii!iil!iiil!!!li!lilliilll!l!illilll!ill!i!!l!il!lll!!lill!!iliil!!iil!i!ilill!!l!!illll!!l!lllllilliilii!l!!illil!l!il!l!!i!il!illiliillllli!!!li!lii!!l!l!!!iliiiiiililllll!i!!!lii!l!!il!!li!ilii!!ll!liilllllil!i!i!li!llii!i!!!!i!i!iliillll!llili!!liiiii!!iii!!ii!lli!!!l"',
-    answer: '376'
+    question: `<pre>Bessie has N haystacks, each with a certain height.
+She can merge two haystacks into one stack with ONE move (where the cost of the move is the 
+sum of their heights). Determine the minimum cost to merge all haystacks into one stack.
+
+input: N = 3
+heights = [4, 3, 2, 6]
+
+output: </pre>
+  `,
+    answer: '29'
   },
   {
-    question: 'Question 4 for Hallway 3',
-    answer: 'Answer4'
+    question: `<pre> What is the time complexity of the following code in Big O notation? (do not include spaces)
+
+    int binarySearch(int[] arr, int x) {
+      int left = 0, right = arr.length - 1;
+      while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (arr[mid] == x) return mid;
+          else if (arr[mid] < x) left = mid + 1;
+          right = mid - 1;
+      }
+      return -1;
+    } </pre>
+  `,
+    answer: 'O(logn)'
   },
   {
-    question: 'Question 5 for Hallway 3',
-    answer: 'Answer5'
+    question: `<pre>Farmer John wants to take a photo of his N cows that are lined up in a single
+row from shortest to tallest, each with height h<sub>i</sub>. But unfortunately, Bessie 
+(his most mischeivious cow) has sneakily repositioned herself somewhere else in the 
+line! The only way Farmer John can move his cows is by swapping the locations of TWO 
+cows at a time. What is the minimum number of swaps needed to have all the cows be 
+properly lined up from shortest to tallest?
+    
+  input: N = 6
+  heights = [3, 6, 9, 9, 13, 4]
+    </pre>`,
+    answer: '3'
   }
 ];
 
