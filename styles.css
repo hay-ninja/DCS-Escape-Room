@@ -84,7 +84,7 @@ body {
 }
 
 #logo-container {
-  animation: EnlargefadeOut 3s ease forwards; /* Fade out the logo over 2 seconds */
+  animation: EnlargefadeOut 3s ease forwards;
 }
 
 @keyframes EnlargefadeOut {
@@ -96,8 +96,29 @@ body {
   animation: fadeIn 1s ease forwards;
 }
 
+/* Puzzle Screen */
 #puzzle-container {
   animation: fadeIn 1s ease forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Width of the rectangle */
+  height: 60%; /* Height of the rectangle */
+  margin: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Optional: Add a slightly transparent background */
+  border-radius: 15px; /* Rounded corners for a smoother look */
+  border: 2px solid white; /* Optional: White border to make it stand out */
+  color: white;
+  overflow: auto; /* Allows scrolling if the content overflows */
+}
+
+pre {
+  white-space: pre-wrap; /* Ensures that the text wraps when necessary */
+  word-wrap: break-word; /* Prevents text from going out of bounds */
+  font-size: 16px; /* Adjust the font size as needed */
+  line-height: 1.4; /* Provides some spacing between lines */
 }
 
 /* Radiant glow effect */
@@ -210,9 +231,13 @@ canvas {
 }
 
 #answer {
-  width: 300px;
+  width: 100%;
   padding: 10px;
   font-size: 18px;
+  border: 1px solid #ccc;
+  background-color: #1d1d1d;
+  color: white;
+  border-radius: 5px;
 }
 
 #result {
