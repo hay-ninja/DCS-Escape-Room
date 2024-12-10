@@ -23,16 +23,16 @@ const questions = [
     answer: 'Ng=='
   },
   {
+    question: '<pre>What is the technical acronym used to represent the graph traversal algorithm known as Depth _____ ______? (All caps)</pre>',
+    answer: 'REZT'
+  },
+  {
+    question: '<pre>What is the technical name for a solution idea that involves selecting the most optimal choice at each step? (All caps)</pre>',
+    answer: 'R1JFRURZ'
+  },
+  {
     question: '<pre>Now for a harder problem!\nI recommend coding this one out.\n<a href="data:text/plain;base64,TXIuIEJhaWxleSBoYXMgdGhyZWUgcG9zaXRpdmUgaW50ZWdlcnMgQSxCLCBhbmQgQyAoQSA8PSBCIDw9IEMpLiBUaGVzZSBpbnRlZ2VycyBhcmUgc3VwcG9zZWQgdG8gYmUga2VwdCBzZWNyZXQsIHNvIGhlIG9ubHkgdGVsbHMgdGhlbSB0byBXaWxsaWFtIEJyaXR0b24gYW5kIGRvZXMgbm90IHJldmVhbCB0aGVtIHRvIHRoZSByZXN0IG9mIHRoZSBjbGFzcy4gSW5zdGVhZCwgaGUgZ2l2ZXMgdGhlIGNsYXNzIHNldmVuIChub3QgbmVjZXNzYXJpbHkgZGlzdGluY3QpIGludGVnZXJzIGluIHRoZSByYW5nZSAxLi4uMTBeOSwgc3RhdGluZyB0aGF0IHRoZXkgYXJlIEEsIEIsIEMsIEEgKyBCLCBCICsgQywgQyArIEEsIGFuZCBBICsgQiArIEMgaW4gc29tZSBvcmRlci4gCgpHaXZlbiBhIGxpc3Qgb2YgdGhlc2Ugc2V2ZW4gbnVtYmVycywgcGxlYXNlIGhlbHAgdGhlIGNsYXNzIGRldGVybWluZSBBLCBCLCBhbmQgQy4KCkdpdmVuIHRoaXMgaW5wdXQ6CjE0ODM4NTI0NyA4MTkzNjU4MjAgNzkzMzIwMzcyIDI2MDQ1NDQ4IDEyMjMzOTc5OSA2NzA5ODA1NzMgNjk3MDI2MDIxCgpXaGF0IGFyZSB0aGUgdmFsdWVzIG9mIEEsIEIsIGFuZCBDPwoKV2hlbiB5b3UgaGF2ZSBhbiBhbnN3ZXIsIHBsZWFzZSBzdWJtaXQgaXQgaW50byB0aGUgZG9vciBpbiB0aGUgZm9ybWF0ICJBIEIgQyIuIEV4OiAxIDIgMwo=">Open me in a new tab for the question data!</a></pre>',
     answer: 'MjYwNDU0NDggMTIyMzM5Nzk5IDY3MDk4MDU3Mw=='
-  },
-  {
-    question: 'Question 4 for Hallway 2',
-    answer: ''
-  },
-  {
-    question: 'Question 5 for Hallway 2',
-    answer: 'Answer5'
   }
 ];
 
