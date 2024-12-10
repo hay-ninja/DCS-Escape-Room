@@ -5,24 +5,24 @@ let keyHeld = false;
 // Questions Array for Hallway 5
 const questions = [
   {
-    question: '<pre>Mr. Bailey has been gaining fans every year. Here’s how his fanbase grew:\n\n- 2020: 40 fans- 2021: 107 fans\n- 2022: 404 fans\n- 2023: 709 fans\n- 2024: 1039 fans\n\nWhat is the **average number of fans** Mr. Bailey has had per year from 2020 to 2024?</pre>',
-    answer: '459.8'
+    question: '<pre> Problem: <br> An online adventure game needs a script to determine if a player escapes the dungeon: <br> <br>The dungeon map is represented by a 2D array of 1s (walls) and 0s (paths). <br> The player starts at the top-left corner and must reach the bottom-right corner.<br>Movement is restricted to adjacent cells (up, down, left, right). <br><br>Input:<br><br>A 2D array of integers representing the dungeon map. <br><br>[0, 1, 0],<br>[1, 0, 1],<br>[0, 0, 0]<br><br><br>Output:<br><br>1 if the player can reach the bottom-right corner.<br>0 if the player cannot escape.</pre>',
+    answer: '0'
   },
   {
-    question: '<pre>Find the palindrome for “supercalifragilisticexpialidocious” and concatenate the 11th, 2nd, and 5th letter in that order. \n\nThe secret classroom to Mr. Bailey’s classroom is the answer!</pre>',
-    answer: 'iuc'
+    question: '<pre>Problem: You are tasked with designing a dynamic photo gallery for a photography club. The gallery should: <br> Display photos in a grid. <br> Adjust the number of columns dynamically based on the screen width: <br> 1 column for less than 600px. <br> 2 columns for 600px to 900px. <br> 3 columns for more than 900px. <br><br> Input: <br> A number representing the screen width. For example: <br> 550 for a screen less than 600px. <br> 750 for a screen between 600px and 900px. <br> 1200 for a screen greater than 900px. <br> <br>Output: <br> The number of columns visible on the screen.<br><br>Input<br>In this case someone enters 750. What is the output?</pre>',
+    answer: '1'
   },
   {
-    question: '<pre>Mr. Bailey has gone missing!\n\nlet Mr. Bailey = l!i!l\n\nTo locate Mr. Bailey, locate the index of him in this crowd of fans..\n\n”li!lii!il!l!!!iil!!!i!ill!!liillili!i!!iil!!liiiilil!i!i!llii!!!lililiiiii!ll!l!lllil!iillillill!!ll!lii!il!ii!lll!!iilll!iilliill!l!!ll!!!!iilll!l!iiilli!li!!llill!lilil!!l!il!llill!!!iiili!lli!i!ii!l!!!li!!lli!i!li!i!!ililliiliil!l!illl!lli!ll!!llili!i!l!l!ii!il!!ll!iliill!!!ill!!!ii!l!i!!i!!i!iiill!!!l!iil!!l!lill!l!i!ii!!l!!i!l!l!iliii!liiliil!iliiiil!!!llliilll!i!!!!!!l!i!l!liillll!l!!!!lll!lii!lii!llii!llliii!l!!!illllill!!!lllll!!lli!i!ii!ili!i!il!iil!lil!il!l!!iliiiil!ili!l!i!ilililiill!i!l!l!l!l!!ilil!!!!!!lili!!i!!iilii!illll!!!il!i!l!il!!!!iiiliiili!!l!!!!lliil!li!llilii!i!!ii!i!iilll!!!il!!i!lli!i!i!l!!i!!llli!i!ll!!lii!l!ll!l!l!iil!!i!ilii!!lliliiii!!!iiiili!lilll!!!l!illllliiliiii!i!il!!!!li!l!!ii!i!!!!li!ll!lii!iil!iiil!!!li!lilliilll!l!illilll!ill!i!!l!il!lll!!lill!!iliil!!iil!i!ilill!!l!!illll!!l!lllllilliilii!l!!illil!l!il!l!!i!il!illiliillllli!!!li!lii!!l!l!!!iliiiiiililllll!i!!!lii!l!!il!!li!ilii!!ll!liilllllil!i!i!li!llii!i!!!!i!i!iliillll!llili!!liiiii!!iii!!ii!lli!!!l"',
-    answer: '376'
+    question: '<pre>Problem: A rogue script has infected your webpage and is inserting <br>random &lt;marquee&gt; elements across the page! Your job is to write a function that: <br> Detects &lt;marquee&gt; tags. <br> Removes them immediately. <br> Logs the total number of &lt;marquee&gt; tags removed in a minute. <br> Input: <br> An array representing the page DOM elements, where 1 is a &lt;marquee&gt; tag and 0 is any other tag. For example: <br> [0, 1, 0, 1, 1, 0] <br> Output: <br>',
+    answer: '3'
   },
   {
-    question: 'Question 4 for Hallway 5',
-    answer: 'Answer4'
+    question: '<pre>Problem: You are building a discount calculator for <br>an e-commerce website. Customers receive a discount based on the total amount of their cart, <br>and there are specific rules for applying the discounts: <br> &nbsp;&nbsp;&nbsp;&nbsp;If the cart total is less than or equal to $100, no discount is applied. <br> &nbsp;&nbsp;&nbsp;&nbsp;If the cart total is between $100 and $500, a 10% discount is applied. <br> &nbsp;&nbsp;&nbsp;&nbsp;If the cart total is between $500 and $1000, a 15% discount is applied. <br> &nbsp;&nbsp;&nbsp;&nbsp;If the cart total is above $1000, a 20% discount is applied. <br> Write a function that calculates the total amount after the discount based on the cart total. <br>The function should round the final total to the nearest integer (in dollars). <br><br> Input: An array of integers representing the prices of individual items in the cart. For example: <br> &nbsp;&nbsp;&nbsp;&nbsp;[30, 120, 450, 80, 250] <br><br> Output: The total amount after the discount has been applied, rounded to the nearest integer (a three-digit number).</pre>',
+    answer: '823'
   },
   {
-    question: 'Question 5 for Hallway 5',
-    answer: 'Answer5'
+    question: 'Problem: You are developing a dynamic website where the background color<br> of the page changes based on user interactions. The color transitions depend on the number of actions a user performs, <br>with each action changing the color progressively:<br><br>Base Color: The page starts with a base background color of #FFFFFF (white).<br><br>Action Rules:<br><br>After every 5 actions, the page background color changes to a shade of blue, starting from #99CCFF (light blue) and progressively becoming darker.<br><br>After every 10 actions, the page background color switches to a shade of green, starting from #CCFF99 (light green) and becoming darker.<br><br>After every 20 actions, the page background color switches to a shade of red, starting from #FF6666 (light red) and becoming darker.<br><br>Write a function that calculates the background color after a certain number of actions and returns the hex code of the color.<br><br>Input: An integer representing the number of actions performed. For example:<br><br>15<br><br>Output: The hex code of the background color after the actions have been performed.',
+    answer: '#66FF66'
   }
 ];
 
@@ -40,6 +40,22 @@ function loadProgress() {
 function saveProgress() {
   localStorage.setItem('hallway5Progress', currentQuestionIndex);
 }
+window.addEventListener("load", function () {
+
+  // Mousemove event for cursor radiance
+  document.addEventListener("mousemove", function (event) {
+    const cursorRadiance = document.getElementById("cursor-radiance");
+    cursorRadiance.style.display = "block";
+    // Update the radiance position based on cursor
+    cursorRadiance.style.left = `${event.pageX}px`;
+    cursorRadiance.style.top = `${event.pageY}px`;
+
+    // Optional: Create a subtle growing/shrinking effect based on cursor movement speed
+    cursorRadiance.style.width = "500px";
+    cursorRadiance.style.height = "500px";
+  });
+
+});
 
 // Start Game Function
 function startGame() {
@@ -56,16 +72,24 @@ function setupDoors() {
     const door = document.createElement("div");
     door.classList.add("door");
     if (i <= currentQuestionIndex) door.classList.add("unlocked"); // Unlock doors up to current progress
-    door.textContent = i + 1;
 
-    door.addEventListener("click", function() {
+    const doorPanel = document.createElement("div");
+    doorPanel.classList.add("door-panel");
+    doorPanel.textContent = i + 1;
+
+    door.appendChild(doorPanel);
+
+    door.addEventListener("click", function () {
       if (door.classList.contains("unlocked")) {
-        enterRoom(i);
+        doorPanel.style.transform = "rotateY(-120deg)";
+        setTimeout(() => enterRoom(i), 1000); // Delay entering the room until animation finishes
       }
     });
+
     doorContainer.appendChild(door);
   }
 }
+
 
 // Enter Room Function
 function enterRoom(index) {
