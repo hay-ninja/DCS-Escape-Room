@@ -5,24 +5,24 @@ let keyHeld = false;
 // Questions Array for Hallway 4
 const questions = [
   {
-    question: '<pre>Mr. Bailey has been gaining fans every year. Here’s how his fanbase grew:\n\n- 2020: 40 fans- 2021: 107 fans\n- 2022: 404 fans\n- 2023: 709 fans\n- 2024: 1039 fans\n\nWhat is the **average number of fans** Mr. Bailey has had per year from 2020 to 2024?</pre>',
-    answer: '459.8'
+    question: '<pre>What does the acronym "GAN" stand for in machine learning?</pre>',
+    answer: 'Generative Adversarial Network'
   },
   {
-    question: '<pre>Find the palindrome for “supercalifragilisticexpialidocious” and concatenate the 11th, 2nd, and 5th letter in that order. \n\nThe secret classroom to Mr. Bailey’s classroom is the answer!</pre>',
-    answer: 'iuc'
+    question: '<pre>In what year did the term "artificial intelligence" first get coined?</pre>',
+    answer: '1956'
   },
   {
-    question: '<pre>Mr. Bailey has gone missing!\n\nlet Mr. Bailey = l!i!l\n\nTo locate Mr. Bailey, locate the index of him in this crowd of fans..\n\n”li!lii!il!l!!!iil!!!i!ill!!liillili!i!!iil!!liiiilil!i!i!llii!!!lililiiiii!ll!l!lllil!iillillill!!ll!lii!il!ii!lll!!iilll!iilliill!l!!ll!!!!iilll!l!iiilli!li!!llill!lilil!!l!il!llill!!!iiili!lli!i!ii!l!!!li!!lli!i!li!i!!ililliiliil!l!illl!lli!ll!!llili!i!l!l!ii!il!!ll!iliill!!!ill!!!ii!l!i!!i!!i!iiill!!!l!iil!!l!lill!l!i!ii!!l!!i!l!l!iliii!liiliil!iliiiil!!!llliilll!i!!!!!!l!i!l!liillll!l!!!!lll!lii!lii!llii!llliii!l!!!illllill!!!lllll!!lli!i!ii!ili!i!il!iil!lil!il!l!!iliiiil!ili!l!i!ilililiill!i!l!l!l!l!!ilil!!!!!!lili!!i!!iilii!illll!!!il!i!l!il!!!!iiiliiili!!l!!!!lliil!li!llilii!i!!ii!i!iilll!!!il!!i!lli!i!i!l!!i!!llli!i!ll!!lii!l!ll!l!l!iil!!i!ilii!!lliliiii!!!iiiili!lilll!!!l!illllliiliiii!i!il!!!!li!l!!ii!i!!!!li!ll!lii!iil!iiil!!!li!lilliilll!l!illilll!ill!i!!l!il!lll!!lill!!iliil!!iil!i!ilill!!l!!illll!!l!lllllilliilii!l!!illil!l!il!l!!i!il!illiliillllli!!!li!lii!!l!l!!!iliiiiiililllll!i!!!lii!l!!il!!li!ilii!!ll!liilllllil!i!i!li!llii!i!!!!i!i!iliillll!llili!!liiiii!!iii!!ii!lli!!!l"',
-    answer: '376'
+    question: '<pre>What is the main goal of supervised learning?</pre>',
+    answer: 'Predict output labels'
   },
   {
-    question: 'Question 4 for Hallway 4',
-    answer: 'Answer4'
+    question: 'What is the name of the algorithm often used for optimizing neural networks, abbreviated as "SGD"?',
+    answer: 'Stochastic Gradient Descent'
   },
   {
-    question: 'Question 5 for Hallway 4',
-    answer: 'Answer5'
+    question: 'Which famous AI computer defeated world chess champion Garry Kasparov in 1997?',
+    answer: 'Deep Blue'
   }
 ];
 
