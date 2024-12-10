@@ -154,6 +154,38 @@ pre {
   color: white;
   font-size: 24px;
   margin: 10px;
+  position: relative;
+  background: linear-gradient(145deg, rgba(0, 0, 0, 1) 0%, rgba(50, 50, 50, 1) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 
+              0 0 40px rgba(255, 255, 255, 0.3), 
+              0 0 60px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.colored-hallway:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 
+              0 0 60px rgba(255, 255, 255, 0.5), 
+              0 0 90px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes auraGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 
+                0 0 40px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.5), 
+                0 0 80px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 
+                0 0 40px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.colored-hallway {
+  animation: auraGlow 2s infinite ease-in-out;
 }
 
 .colored-hallway.completed {
