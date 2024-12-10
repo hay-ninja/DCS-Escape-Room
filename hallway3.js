@@ -5,15 +5,13 @@ let keyHeld = false;
 // Questions Array for Hallway 3
 const questions = [
   {
-    question: `What is the time complexity of the following code in Big O notation? (don't use spaces) <pre>for(int i=1; i<=n; i*=2) {
-      for(int j=1; j<=n; j++) {
-          for(int k=1; k<=n; j++) {
-              //does some action here
-        }
-    }
+    question: `What is the time complexity of the following code in Big O notation? (don't use spaces or capital letters) <pre>for(int j=1; j<=n; j++) {
+        for(int k=1; k<=n; j++) {
+            //does some action here
+      }
 } </pre>
   `,
-    answer: 'O(n^2logn)'
+    answer: 'O(n^2)'
   },
   {
     question: `<pre>Oh no! Bessie the Cow has unfortunately fallen into a hole, but luckily
@@ -27,19 +25,8 @@ output: </pre>
     answer: '21'
   },
   {
-    question: `<pre>Bessie has N haystacks, each with a certain height.
-She can merge two haystacks into one stack with ONE move (where the cost of the move is the 
-sum of their heights). Determine the minimum cost to merge all haystacks into one stack.
-
-input: N = 3
-heights = [4, 3, 2, 6]
-
-output: </pre>
-  `,
-    answer: '29'
-  },
-  {
-    question: `<pre> What is the time complexity of the following code in Big O notation? (do not include spaces)
+    question: `<pre> What is the time complexity of the following code in 
+ Big O notation? (don't use spaces or capital letters)
 
     int binarySearch(int[] arr, int x) {
       int left = 0, right = arr.length - 1;
@@ -66,6 +53,18 @@ properly lined up from shortest to tallest?
   heights = [3, 6, 9, 9, 13, 4]
     </pre>`,
     answer: '3'
+  },
+  {
+    question: `<pre>Bessie has N haystacks, each with a certain height.
+She can merge two haystacks into one stack with ONE move (where the cost of the move is the 
+sum of their heights). Determine the minimum cost to merge all haystacks into one stack.
+
+input: N = 4
+heights = [4, 3, 2, 6]
+
+output: </pre>
+  `,
+    answer: '29'
   }
 ];
 
