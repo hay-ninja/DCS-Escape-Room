@@ -11,7 +11,7 @@ const questions = [
       }
 } </pre>
   `,
-    answer: 'O(n^2)'
+    answer: 'TyhuXjIp'
   },
   {
     question: `<pre>Oh no! Bessie the Cow has unfortunately fallen into a hole, but luckily
@@ -22,7 +22,7 @@ Bessie could reach the top using 1 or 2 steps. (CODE the solution and find the a
 input: N = 7
 output: </pre>
   `,
-    answer: '21'
+    answer: 'MjE='
   },
   {
     question: `<pre> What is the time complexity of the following code in 
@@ -39,7 +39,7 @@ output: </pre>
       return -1;
     } </pre>
   `,
-    answer: 'O(logn)'
+    answer: 'Tyhsb2duKQ=='
   },
   {
     question: `<pre>Farmer John wants to take a photo of his N cows that are lined up in a single
@@ -52,7 +52,7 @@ properly lined up from shortest to tallest?
   input: N = 6
   heights = [3, 6, 9, 9, 13, 4]
     </pre>`,
-    answer: '3'
+    answer: 'Mw=='
   },
   {
     question: `<pre>Bessie has N haystacks, each with a certain height.
@@ -64,7 +64,7 @@ heights = [4, 3, 2, 6]
 
 output: </pre>
   `,
-    answer: '29'
+    answer: 'Mjk='
   }
 ];
 
@@ -129,7 +129,7 @@ function displayQuestion() {
 function checkAnswer() {
   const answer = document.getElementById("answer").value.trim();
   const result = document.getElementById("result");
-  if (answer === questions[currentQuestionIndex].answer) {
+  if (answer === dc(questions[currentQuestionIndex].answer)) {
     result.textContent = "CORRECT";
     result.style.color = "rgb(87, 214, 87)";
     showKey();
@@ -169,7 +169,9 @@ function goBack() {
     document.getElementById("completion-screen").style.display = "block";
   }
 }
-
+function dc(str) {
+  return decodeURIComponent(atob(str).split('').map(function(c) { return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); }).join('')); 
+}
 // Go Back to Hallways Function
 function goBackToHallways() {
   window.location.href = "actual-escape-room.html";
