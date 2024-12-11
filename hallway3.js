@@ -5,15 +5,13 @@ let keyHeld = false;
 // Questions Array for Hallway 3
 const questions = [
   {
-    question: `What is the time complexity of the following code in Big O notation? (don't use spaces) <pre>for(int i=1; i<=n; i*=2) {
-      for(int j=1; j<=n; j++) {
-          for(int k=1; k<=n; j++) {
-              //does some action here
-        }
-    }
+    question: `What is the time complexity of the following code in Big O notation? (don't use spaces or capital letters) <pre>for(int j=1; j<=n; j++) {
+        for(int k=1; k<=n; j++) {
+            //does some action here
+      }
 } </pre>
   `,
-    answer: 'O(n^2logn)'
+    answer: 'TyhuXjIp'
   },
   {
     question: `<pre>Oh no! Bessie the Cow has unfortunately fallen into a hole, but luckily
@@ -24,22 +22,11 @@ Bessie could reach the top using 1 or 2 steps. (CODE the solution and find the a
 input: N = 7
 output: </pre>
   `,
-    answer: '21'
+    answer: 'MjE='
   },
   {
-    question: `<pre>Bessie has N haystacks, each with a certain height.
-She can merge two haystacks into one stack with ONE move (where the cost of the move is the 
-sum of their heights). Determine the minimum cost to merge all haystacks into one stack.
-
-input: N = 3
-heights = [4, 3, 2, 6]
-
-output: </pre>
-  `,
-    answer: '29'
-  },
-  {
-    question: `<pre> What is the time complexity of the following code in Big O notation? (do not include spaces)
+    question: `<pre> What is the time complexity of the following code in 
+ Big O notation? (don't use spaces or capital letters)
 
     int binarySearch(int[] arr, int x) {
       int left = 0, right = arr.length - 1;
@@ -52,7 +39,7 @@ output: </pre>
       return -1;
     } </pre>
   `,
-    answer: 'O(logn)'
+    answer: 'Tyhsb2duKQ=='
   },
   {
     question: `<pre>Farmer John wants to take a photo of his N cows that are lined up in a single
@@ -65,7 +52,19 @@ properly lined up from shortest to tallest?
   input: N = 6
   heights = [3, 6, 9, 9, 13, 4]
     </pre>`,
-    answer: '3'
+    answer: 'Mw=='
+  },
+  {
+    question: `<pre>Bessie has N haystacks, each with a certain height.
+She can merge two haystacks into one stack with ONE move (where the cost of the move is the 
+sum of their heights). Determine the minimum cost to merge all haystacks into one stack.
+
+input: N = 4
+heights = [4, 3, 2, 6]
+
+output: </pre>
+  `,
+    answer: 'Mjk='
   }
 ];
 
@@ -130,7 +129,7 @@ function displayQuestion() {
 function checkAnswer() {
   const answer = document.getElementById("answer").value.trim();
   const result = document.getElementById("result");
-  if (answer === questions[currentQuestionIndex].answer) {
+  if (answer === dc(questions[currentQuestionIndex].answer)) {
     result.textContent = "CORRECT";
     result.style.color = "rgb(87, 214, 87)";
     showKey();
@@ -170,7 +169,9 @@ function goBack() {
     document.getElementById("completion-screen").style.display = "block";
   }
 }
-
+function dc(str) {
+  return decodeURIComponent(atob(str).split('').map(function(c) { return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2); }).join('')); 
+}
 // Go Back to Hallways Function
 function goBackToHallways() {
   window.location.href = "actual-escape-room.html";
