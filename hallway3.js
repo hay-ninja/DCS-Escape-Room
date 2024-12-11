@@ -5,8 +5,8 @@ let keyHeld = false;
 // Questions Array for Hallway 3
 const questions = [
   {
-    question: `What is the time complexity of the following code in Big O notation? (don't use spaces or capital letters) <pre>for(int j=1; j<=n; j++) {
-        for(int k=1; k<=n; j++) {
+    question: `What is the time complexity of the following code in Big O notation? Do not use spaces or capital letters except for the O. <pre>for(int j=1; j<=n; j++) {
+        for(int k=1; k<=n; k++) {
             //does some action here
       }
 } </pre>
@@ -44,7 +44,7 @@ output: </pre>
   {
     question: `<pre>Farmer John wants to take a photo of his N cows that are lined up in a single
 row from shortest to tallest, each with height h<sub>i</sub>. But unfortunately, Bessie 
-(his most mischeivious cow) has sneakily repositioned herself somewhere else in the 
+(his most mischievious cow) has sneakily repositioned herself somewhere else in the 
 line! The only way Farmer John can move his cows is by swapping the locations of TWO 
 cows at a time. What is the minimum number of swaps needed to have all the cows be 
 properly lined up from shortest to tallest?
