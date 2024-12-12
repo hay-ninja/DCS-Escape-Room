@@ -18,7 +18,7 @@ const questions = [
     answer: 'NDU5Ljg='
   },
   {
-    question: '<pre>Find the palindrome for “supercalifragilisticexpialidocious” and concatenate the 11th, 2nd, and 5th letter in that order. \n\nThe secret classroom to Mr. Bailey’s classroom is the answer!</pre>',
+    question: '<pre>Find the reverse for “supercalifragilisticexpialidocious” and concatenate the 11th, 2nd, and 6th letter in that order. \n\nThe secret classroom to Mr. Bailey’s classroom is the answer!</pre>',
     answer: 'cnVj'
   },
   {
