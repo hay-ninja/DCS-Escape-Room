@@ -14,7 +14,7 @@ let keyHeld = false;
 
 const questions = [
   {
-    question: '<pre>Mr. Bailey has been gaining fans every year. Here’s how his fanbase grew:\n\n- 2020: 40 fans- 2021: 107 fans\n- 2022: 404 fans\n- 2023: 709 fans\n- 2024: 1039 fans\n\nWhat is the average number of fans Mr. Bailey has had per year from 2020 to 2024?</pre>',
+    question: '<pre>Mr. Bailey has been gaining fans every year. Here’s how his fanbase grew:\n\n- 2020: 40 fans\n- 2021: 107 fans\n- 2022: 404 fans\n- 2023: 709 fans\n- 2024: 1039 fans\n\nWhat is the average number of fans Mr. Bailey has had per year from 2020 to 2024?</pre>',
     answer: 'NDU5Ljg='
   },
   {

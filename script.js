@@ -101,6 +101,7 @@ function enterRoom(index) {
   document.getElementById("puzzle-container").style.display = "block";
   currentQuestionIndex = index;
   displayQuestion();
+  keyCollected = false;
 }
 
 // Display Question Function
@@ -138,17 +139,17 @@ function showKey() {
       keyHeld = true;
       key.style.display = "none";
       goBack();
+      keyCollected = false;
     }
   };
 
   // Add an event listener to recognize the Enter key as a click
   document.addEventListener('keydown', function handleKeyPress(event) {
-    if (event.key === 'Enter' && !keyCollected) {
+    if (event.key === "Enter" && !keyCollected) {
       keyCollected = true; // Mark the key as collected
       keyHeld = true;
       key.style.display = "none";
       goBack();
-
       // Remove this event listener after handling the Enter key
       document.removeEventListener('keydown', handleKeyPress);
     }
